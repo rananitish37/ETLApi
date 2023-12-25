@@ -19,7 +19,7 @@ def transform_data(request):
     if not stored_data:
         return JsonResponse({'error': 'No data to transform.'}, status=400)
 
-    if transformation_type == 'UPPER_CASE':
+    elif transformation_type == 'UPPER_CASE':
         transformed_data = stored_data.upper()
     elif transformation_type == 'LOWER_CASE':
         transformed_data = stored_data.lower()
